@@ -459,11 +459,6 @@ img {
   background-color: var(--accent-color);
 }
 
-/* .team-section .social-link:hover,
-.team-section .social-link:focus {
-  background-color: var(--accent-color);
-} */
-
 /* Секция клиенты */
 .clients-section {
   padding-top: 94px;
