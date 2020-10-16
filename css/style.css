@@ -77,7 +77,6 @@ img {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  /* outline: 1px solid tomato; */
 }
 
 /* Шапка */
@@ -129,29 +128,27 @@ img {
 
 .header-contacts .link {
   color: var(--primary-text-color);
-  display: inline-flex;
+  display: flex;
+  align-items: center;
 }
 
 .header-contacts .link:not(:last-child) {
   margin-right: 30px;
 }
 
-.header-contacts .link::before {
-  content: "";
+.header-contacts svg {
+  fill: var(--primary-text-color);
   margin-right: 10px;
-  align-self: center;
 }
 
-.envelope::before {
+.header-contacts .envelope {
   width: 16px;
   height: 12px;
-  background-image: url(../images/envelope.svg);
 }
 
-.smartphone::before {
+.header-contacts .smartphone {
   width: 10px;
   height: 16px;
-  background-image: url(../images/smartphone.svg);
 }
 
 .nav-list .link:hover,
@@ -159,6 +156,11 @@ img {
 .header-contacts .link:hover,
 .header-contacts .link:focus {
   color: var(--accent-color);
+}
+
+.header-contacts .link:hover svg,
+.header-contacts .link:focus svg {
+  fill: var(--accent-color);
 }
 
 /* Подвал */
@@ -213,7 +215,7 @@ img {
   padding-top: 12px;
 }
 
-.sub-container > .text {
+.social .text {
   line-height: 1.14;
   font-weight: 700;
   text-transform: uppercase;
@@ -222,7 +224,6 @@ img {
 
 .sub-container .link-list {
   display: flex;
-  height: 44px;
 }
 
 .sub-container .item-link:not(:last-child) {
@@ -230,10 +231,14 @@ img {
 }
 
 .sub-container .social-link {
-  display: inline-block;
+  display: flex;
   padding: 12px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social .icon-footer {
+  fill: var(--primary-bg-color);
 }
 
 .sub-container .social-link:hover,
@@ -248,13 +253,13 @@ img {
   background-color: var(--tertiary-bg-color);
 
   background-image: linear-gradient(
-      to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/bg-01.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 
   padding-top: 200px;
   padding-bottom: 200px;
@@ -449,14 +454,25 @@ img {
 }
 
 .team-section .social-link {
-  display: inline-block;
+  display: flex;
   padding: 12px;
   border-radius: 50%;
+}
+
+.social-link svg {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
 }
 
 .team-section .social-link:hover,
 .team-section .social-link:focus {
   background-color: var(--accent-color);
+}
+
+.team-section .social-link:hover svg,
+.team-section .social-link:focus svg {
+  fill: var(--primary-bg-color);
 }
 
 /* Секция клиенты */
@@ -486,14 +502,53 @@ img {
   height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.company svg {
+  fill: #afb1b8;
+}
+
+.company-01 svg {
+  width: 44.27px;
+  height: 49.23px;
+}
+
+.company-02 svg {
+  width: 40px;
+  height: 52px;
+}
+
+.company-03 svg {
+  width: 41px;
+  height: 42.6px;
+}
+
+.company-04 svg {
+  width: 79.66px;
+  height: 42.02px;
+}
+
+.company-05 svg {
+  width: 59px;
+  height: 47px;
+}
+
+.company-06 svg {
+  width: 88.48px;
+  height: 45.44px;
 }
 
 .clients-section .company:hover,
 .clients-section .company:focus {
   border-color: var(--accent-color);
+}
+
+.clients-section .company:hover svg,
+.clients-section .company:focus svg {
+  fill: var(--accent-color);
 }
 
 /* Контент страницы Портфолио */
